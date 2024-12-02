@@ -11,8 +11,10 @@
             runs-on: ubuntu-latest
             
             steps:
-                - name: 'Testing Github actions'
-                  run: pwd
+                - name: 'Printing Folder contents(before)'
+                  run: ls
                 
-                - name: 'Testing printing'
-                  run: echo test
+                - uses: actions/checkout@v3
+                
+                - name: 'Printing Folder contents(after)'
+                  run: ls
